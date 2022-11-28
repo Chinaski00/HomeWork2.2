@@ -2,7 +2,7 @@ package Drivers;
 
 import Auto.Car;
 
-public abstract class Driver extends Car {
+public class Driver extends Car {
 
     private String name;
     private boolean rights;
@@ -49,10 +49,15 @@ public abstract class Driver extends Car {
         experience = experience;
     }
 
-    public abstract void startMove();
-    public abstract void endMove();
-    public abstract void fillCar();
-
+    public void startMove() {
+        System.out.println("Разгон водителя");
+    }
+    public void endMove() {
+        System.out.println("Остановка водителя");
+    }
+    public void fillCar() {
+        System.out.println("Заправить машину");
+    }
     public String toString(){
         return "Водитель " + getName() + " управляет автомобилем " + getBrand()  + " и будет участвовать в заезде";
     }
