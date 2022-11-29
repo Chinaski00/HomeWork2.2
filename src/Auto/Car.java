@@ -1,8 +1,6 @@
 package Auto;
 
-import java.util.Objects;
-
-public class Car {
+public class Car extends Transport {
 
     private String brand;
     private String model;
@@ -39,5 +37,8 @@ public class Car {
     public void setEngineCapacity(double engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
-
+    @Override
+    public String printType() {
+       return "Машина";
+    }
 }
