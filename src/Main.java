@@ -1,6 +1,7 @@
 import Auto.Bus;
 import Auto.PassengerCars;
 import Auto.Track;
+import Auto.Transport;
 import Drivers.DriverClassB;
 import Drivers.DriverClassC;
 import Drivers.DriverClassD;
@@ -35,5 +36,19 @@ public class Main {
         System.out.println(driverClassC.toString());
         System.out.println(bus1.printType());
 
+        autoService(bus1,bus2,bus3,bus4,
+                track1,track2,track3,track4,
+                car1,car2,car3,car4);
     }
-}
+    public static void autoService(Transport... transports){
+        for (int i = 0; i < transports.length; i++) {
+            try {
+                if (!transports[i].passDiagnostics()) {
+                    throw new RuntimeException("Не прошёл проверку");
+                }
+                }catch(RuntimeException e){
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+        }

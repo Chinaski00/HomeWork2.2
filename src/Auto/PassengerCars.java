@@ -56,6 +56,12 @@ public class PassengerCars extends Car implements Competing{
     public int maxSpeed() {
         return 160;
     }
+    public boolean passDiagnostics(){
+        System.out.println("Проверка пройдена");
+        return true;
+    }
+
+
     @Override
     public String printType() {
         if (type != null){

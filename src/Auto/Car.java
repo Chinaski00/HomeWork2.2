@@ -37,6 +37,9 @@ public class Car extends Transport {
     public void setEngineCapacity(double engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
+    public boolean passDiagnostics(){
+        return true;
+    }
     @Override
     public String printType() {
        return "Машина";

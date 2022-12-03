@@ -58,6 +58,11 @@ public class Driver extends Car {
     public void fillCar() {
         System.out.println("Заправить машину");
     }
+    public static void checkRig(Boolean rights){
+        if (rights == null){
+            throw new RuntimeException("Необходимо указать тип прав!");
+        }
+    }
     public String toString(){
         return "Водитель " + getName() + " управляет автомобилем " + getBrand()  + " и будет участвовать в заезде";
     }

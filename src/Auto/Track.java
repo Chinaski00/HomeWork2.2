@@ -63,7 +63,10 @@ public class Track extends Car implements Competing {
     public int maxSpeed() {
         return 120;
     }
-
+    public boolean passDiagnostics(){
+        System.out.println("Проверка пройдена");
+        return true;
+    }
     @Override
     public String printType() {
         if (type != null){

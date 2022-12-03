@@ -62,6 +62,10 @@ public class Bus extends Car implements Competing{
     public int maxSpeed() {
         return 100;
     }
+    public boolean passDiagnostics(){
+      System.out.println("Автобус " + getModel() + " в диагностике не требуется");
+        return false;
+    }
     @Override
     public String printType() {
         if (type != null){
