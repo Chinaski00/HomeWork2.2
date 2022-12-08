@@ -1,5 +1,7 @@
 package Auto;
 
+import java.util.List;
+
 public class PassengerCars extends Car implements Competing{
     private String type;
 
@@ -60,7 +62,6 @@ public class PassengerCars extends Car implements Competing{
         System.out.println("Проверка пройдена");
         return true;
     }
-
 
     @Override
     public String printType() {

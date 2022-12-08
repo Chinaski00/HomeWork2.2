@@ -1,10 +1,18 @@
 package Auto;
 
+import Drivers.Driver;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car extends Transport {
 
     private String brand;
     private String model;
     private double engineCapacity;
+    private List<Driver> drivers = new ArrayList<>();
+    private List<Mechanic> mechanics = new ArrayList<>();
+    private List<Sponsor> sponsors = new ArrayList<>();
 
     public Car(String brand, String model, double engineCapacity) {
         this.brand = brand;
@@ -21,7 +29,6 @@ public class Car extends Transport {
         }
         this.engineCapacity = Math.abs(engineCapacity);
     }
-
     public String getBrand() {
         return brand;
     }
@@ -37,9 +44,33 @@ public class Car extends Transport {
     public void setEngineCapacity(double engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
+
+    public void addDriver(Driver driver){
+        drivers.add(driver);
+    }
+    public void addMechanic(Mechanic mechanic){
+        mechanics.add(mechanic);
+    }
+    public void addSponsor(Sponsor sponsor){
+        sponsors.add(sponsor);
+    }
+
+    public List<Driver> getDrivers() {
+        return drivers;
+    }
+
+    public List<Mechanic> getMechanics() {
+        return mechanics;
+    }
+
+    public List<Sponsor> getSponsors() {
+        return sponsors;
+    }
+
     public boolean passDiagnostics(){
         return true;
     }
+
     @Override
     public String printType() {
        return "Машина";

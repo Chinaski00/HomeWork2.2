@@ -1,5 +1,7 @@
 package Auto;
 
+import java.util.List;
+
 public class Bus extends Car implements Competing{
     private String type;
     public Bus(String brand, String model, double engineCapacity, String type) {
