@@ -3,16 +3,18 @@ package Auto;
 import Drivers.Driver;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Car extends Transport {
 
     private String brand;
     private String model;
     private double engineCapacity;
-    private List<Driver> drivers = new ArrayList<>();
-    private List<Mechanic> mechanics = new ArrayList<>();
-    private List<Sponsor> sponsors = new ArrayList<>();
+    private Set<Driver> drivers = new HashSet<>();
+    private Set<Mechanic> mechanics = new HashSet<>();
+    private Set<Sponsor> sponsors = new HashSet<>();
 
     public Car(String brand, String model, double engineCapacity) {
         this.brand = brand;
@@ -55,15 +57,15 @@ public class Car extends Transport {
         sponsors.add(sponsor);
     }
 
-    public List<Driver> getDrivers() {
+    public Set<Driver> getDrivers() {
         return drivers;
     }
 
-    public List<Mechanic> getMechanics() {
+    public Set<Mechanic> getMechanics() {
         return mechanics;
     }
 
-    public List<Sponsor> getSponsors() {
+    public Set<Sponsor> getSponsors() {
         return sponsors;
     }
 

@@ -4,9 +4,7 @@ import Drivers.DriverClassB;
 import Drivers.DriverClassC;
 import Drivers.DriverClassD;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,7 +45,8 @@ public class Main {
         System.out.println(driverClassB.toString());
         System.out.println(driverClassC.toString());
         System.out.println(bus1.printType());
-        List<Car> cars = new ArrayList<>();
+
+        Set<Car> cars = new HashSet<>();
         cars.add(bus1);
         cars.add(bus2);
         cars.add(bus3);
